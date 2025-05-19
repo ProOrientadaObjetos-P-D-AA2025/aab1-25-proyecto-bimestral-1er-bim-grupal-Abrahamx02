@@ -23,6 +23,23 @@ public class cartelera {
                            (4)una pelicula de minecraft        HORARIOS: 13:50""");
         System.out.println("\nQue opcion de pelicula quiere ver?");
         int op = datos.nextInt();
+        switch(op){
+            case 1:
+                facturacion.facturacion1();
+                break;
+                case 2:
+                    facturacion.facturacion2();
+                break;
+                case 3:
+                    facturacion.facturacion3();
+                break;
+                case 4:
+                    facturacion.facturacion4();
+                break;
+                default:
+                    System.out.println("Opcion no valida");
+                break;
+        }
 
     }
 
@@ -34,7 +51,23 @@ public class cartelera {
                            (4)una pelicula de minecraft        HORARIOS: 13:50""");
         System.out.println("\nQue opcion de pelicula quiere ver?");
         int op = datos.nextInt();
-
+        switch(op){
+            case 1:
+                facturacion.facturacion1();
+                break;
+                case 2:
+                    facturacion.facturacion2();
+                break;
+                case 3:
+                    facturacion.facturacion3();
+                break;
+                case 4:
+                    facturacion.facturacion4();
+                break;
+                default:
+                    System.out.println("Opcion no valida");
+                break;
+        }
     }
 
     public static void carteleraMC() {
@@ -45,7 +78,23 @@ public class cartelera {
                            (4)una pelicula de minecraft        HORARIOS: 13:50""");
         System.out.println("\nQue opcion de pelicula quiere ver?");
         int op = datos.nextInt();
-
+        switch(op){
+            case 1:
+                facturacion.facturacion1();
+                break;
+                case 2:
+                    facturacion.facturacion2();
+                break;
+                case 3:
+                    facturacion.facturacion3();
+                break;
+                case 4:
+                    facturacion.facturacion4();
+                break;
+                default:
+                    System.out.println("Opcion no valida");
+                break;
+        }
     }
 
     public static void carteleraJ() {
@@ -56,6 +105,23 @@ public class cartelera {
                            (4)una pelicula de minecraft        HORARIOS: 13:50""");
         System.out.println("\nQue opcion de pelicula quiere ver?");
         int op = datos.nextInt();
+        switch(op){
+            case 1:
+                facturacion.facturacion1();
+                break;
+                case 2:
+                    facturacion.facturacion2();
+                break;
+                case 3:
+                    facturacion.facturacion3();
+                break;
+                case 4:
+                    facturacion.facturacion4();
+                break;
+                default:
+                    System.out.println("Opcion no valida");
+                break;
+        }
 
     }
 
@@ -67,6 +133,24 @@ public class cartelera {
                            (4)una pelicula de minecraft        HORARIOS: 13:50""");
         System.out.println("\nQue opcion de pelicula quiere ver?");
         int op = datos.nextInt();
+       switch(op){
+            case 1:
+                facturacion.facturacion1();
+                break;
+                case 2:
+                    facturacion.facturacion2();
+                break;
+                case 3:
+                    facturacion.facturacion3();
+                break;
+                case 4:
+                    facturacion.facturacion4();
+                break;
+                default:
+                    System.out.println("Opcion no valida");
+                break;
+        }
+        
 
     }
 }

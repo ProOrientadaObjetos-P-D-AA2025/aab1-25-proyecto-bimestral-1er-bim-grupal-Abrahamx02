@@ -27,8 +27,6 @@ public class TrabajoBimestralPOO {
             default:
                 System.out.println("Dia no valido ");
                 break;
-                
-                
 
         }
     }

@@ -10,19 +10,19 @@ public class TrabajoBimestralPOO {
         String op = datos.nextLine().toLowerCase();
         switch (op) {
             case "lunes":
-                cartelera.carteleraL();
+                cartelera.cartelera();
                 break;
             case "martes":
-                cartelera.carteleraM();
+                cartelera.cartelera();
                 break;
             case "miercoles":
-                cartelera.carteleraMC();
+                cartelera.cartelera();
                 break;
             case "jueves":
-                cartelera.carteleraJ();
+                cartelera.cartelera();
                 break;
             case "viernes":
-                cartelera.carteleraV();
+                cartelera.cartelera();
                 break;
             default:
                 System.out.println("Dia no valido ");

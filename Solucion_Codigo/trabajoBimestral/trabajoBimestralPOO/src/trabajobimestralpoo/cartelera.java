@@ -23,6 +23,7 @@ public class cartelera {
                            (4)una pelicula de minecraft        HORARIOS: 13:50""");
         System.out.println("\nQue opcion de pelicula quiere ver?");
         int op = datos.nextInt();
+        datos.nextLine();
         switch(op){
             case 1:
                 facturacion.facturacion1(opc);

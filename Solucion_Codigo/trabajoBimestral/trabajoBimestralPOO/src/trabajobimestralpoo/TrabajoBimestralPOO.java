@@ -6,6 +6,8 @@ public class TrabajoBimestralPOO {
 
     public static void main(String[] args) {
         Scanner datos = new Scanner(System.in);
+        boolean continuar = true;
+        while(continuar){
         System.out.println("Los Horarios de que dia quiere observar?");
         String opc = datos.nextLine().toLowerCase();
         switch (opc) {
@@ -29,11 +31,20 @@ public class TrabajoBimestralPOO {
                 break;
 
         }
+        System.out.println("¿Desea realizar otra consulta/venta? (si/no)");
+            String respuesta = datos.nextLine();
+            if (!respuesta.equalsIgnoreCase("si")) {
+                continuar = false;
+            }
+        }
+        RegistroVentas.mostrarVentas();
+    }
+    
         
 
             
         
-        
-    }
+         
+    
 
 }

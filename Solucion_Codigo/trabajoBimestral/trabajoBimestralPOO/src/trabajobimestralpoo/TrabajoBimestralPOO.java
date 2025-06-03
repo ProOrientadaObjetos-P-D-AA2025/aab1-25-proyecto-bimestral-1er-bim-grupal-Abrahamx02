@@ -7,28 +7,33 @@ public class TrabajoBimestralPOO {
     public static void main(String[] args) {
         Scanner datos = new Scanner(System.in);
         System.out.println("Los Horarios de que dia quiere observar?");
-        String op = datos.nextLine().toLowerCase();
-        switch (op) {
+        String opc = datos.nextLine().toLowerCase();
+        switch (opc) {
             case "lunes":
-                cartelera.cartelera();
+                cartelera.cartelera(opc);
                 break;
             case "martes":
-                cartelera.cartelera();
+                cartelera.cartelera(opc);
                 break;
             case "miercoles":
-                cartelera.cartelera();
+                cartelera.cartelera(opc);
                 break;
             case "jueves":
-                cartelera.cartelera();
+                cartelera.cartelera(opc);
                 break;
             case "viernes":
-                cartelera.cartelera();
+                cartelera.cartelera(opc);
                 break;
             default:
                 System.out.println("Dia no valido ");
                 break;
 
         }
+        
+
+            
+        
+        
     }
 
 }

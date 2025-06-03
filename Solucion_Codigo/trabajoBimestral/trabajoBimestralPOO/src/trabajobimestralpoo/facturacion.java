@@ -15,7 +15,7 @@ public class facturacion {
     static Scanner facturacion = new Scanner(System.in);
     static double pago = 0;
 
-    public static void facturacion1() {
+    public static void facturacion1(String opc) {
         System.out.println("""
                            Los horarios disponibles son:
                                  (1)14:10 |(2) 16:20 |(3) 18:30 |(4) 20:40
@@ -28,7 +28,7 @@ public class facturacion {
                                    DESTINO FINAL: LAZOS DE SANGRE
                                    Horario: 14:10
                                    SALA: 03""");
-                pago = pagacion();
+                pago = pagacion(opc);
                 snacks.venta();
                 break;
             case (2):
@@ -43,7 +43,7 @@ public class facturacion {
                                    DESTINO FINAL: LAZOS DE SANGRE
                                    Horario: 18:30
                                    SALA: 01""");
-                pago = pagacion();
+                pago = pagacion(opc);
                 snacks.venta();
                 break;
             case (4):
@@ -51,7 +51,7 @@ public class facturacion {
                                    DESTINO FINAL: LAZOS DE SANGRE
                                    Horario: 20:40
                                    SALA: 02""");
-                pago = pagacion();
+                 pago = pagacion(opc);
                 snacks.venta();
                 break;
             default:
@@ -61,7 +61,7 @@ public class facturacion {
 
     }
 
-    public static void facturacion2() {
+    public static void facturacion2(String opc) {
         System.out.println("""
                            Los horarios disponibles son:
                                  (1)14:00 |(2) 16:00 |(3) 18:00 |(4) 20:00
@@ -74,7 +74,7 @@ public class facturacion {
                                    KARATE KID: LEYENDAS
                                    Horario: 14:00
                                    SALA: 02""");
-                pago = pagacion();
+                pago = pagacion(opc);
                 snacks.venta();
                 break;
             case (2):
@@ -82,7 +82,7 @@ public class facturacion {
                                    KARATE KID: LEYENDAS
                                    Horario: 16:00
                                    SALA: 01""");
-                pago = pagacion();
+                pago = pagacion(opc);
                 snacks.venta();
                 break;
             case (3):
@@ -90,7 +90,7 @@ public class facturacion {
                                    KARATE KID: LEYENDAS
                                    Horario: 18:00
                                    SALA: 05""");
-                pago = pagacion();
+                pago = pagacion(opc);
                 snacks.venta();
                 break;
             case (4):
@@ -98,7 +98,7 @@ public class facturacion {
                                    KARATE KID: LEYENDAS
                                    Horario: 20:00
                                    SALA: 03""");
-                pago = pagacion();
+                pago = pagacion(opc);
                 snacks.venta();
                 break;
             default:
@@ -108,7 +108,7 @@ public class facturacion {
 
     }
 
-    public static void facturacion3() {
+    public static void facturacion3(String opc) {
         System.out.println("""
                            Los horarios disponibles son:
                                  (1)15:50 |(2) 18:20 |(3) 20:50 |
@@ -121,7 +121,7 @@ public class facturacion {
                                    THUNDERBOLTS
                                    Horario: 15:50
                                    SALA: 04""");
-                pago = pagacion();
+                pago = pagacion(opc);
                 snacks.venta();
                 break;
             case (2):
@@ -129,7 +129,7 @@ public class facturacion {
                                    THUNDERBOLTS
                                    Horario: 18:20
                                    SALA: 02""");
-                pago = pagacion();
+                pago = pagacion(opc);
                 snacks.venta();
                 break;
             case (3):
@@ -137,7 +137,7 @@ public class facturacion {
                                    THUNDERBOLTS
                                    Horario: 20:50
                                    SALA: 05""");
-                pago = pagacion();
+                pago = pagacion(opc);
                 snacks.venta();
                 break;
             default:
@@ -147,7 +147,7 @@ public class facturacion {
 
     }
 
-    public static void facturacion4() {
+    public static void facturacion4(String opc) {
         System.out.println("""
                            Los horarios disponibles son:
                                  (1)13:50 |
@@ -160,7 +160,7 @@ public class facturacion {
                                    UNA PELICULA DE MINECRAFT 
                                    Horario: 13:50
                                    SALA: 03""");
-                pago = pagacion();
+                pago = pagacion(opc);
                 snacks.venta();
                 break;
             
@@ -171,15 +171,27 @@ public class facturacion {
 
     }
 
-    public static double pagacion() {
-
+    public static double pagacion(String opc) {
+        if(opc.equalsIgnoreCase("martes")||opc.equalsIgnoreCase("jueves")){
+            System.out.println("precio del boleto a mitad de precio : 3,75$");
+        double valorTK = 3.75;
+        System.out.println("Ingrese la cantidad de boletos a comprar");
+        int tickets = facturacion.nextInt();
+        double MontoPagar = tickets * valorTK;
+        System.out.println("Usted tiene que pagar el monto de: " + MontoPagar + "$");
+        return MontoPagar;
+        }else{
+            
+        
         System.out.println("precio de boleto: 7,50$");
         double valorTK = 7.50;
         System.out.println("Ingrese la cantidad de boletos a comprar");
         int tickets = facturacion.nextInt();
         double MontoPagar = tickets * valorTK;
         System.out.println("Usted tiene que pagar el monto de: " + MontoPagar + "$");
+        
         return MontoPagar;
+        }
     }
 
 }

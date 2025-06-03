@@ -14,7 +14,7 @@ public class cartelera {
 
     static Scanner datos = new Scanner(System.in);
 
-    public static void cartelera() {
+    public static void cartelera(String opc) {
 
         System.out.println("""                                             
                            (1)DESTINO FINAL: LAZOS DE SANGRE   HORARIOS: 14:10 - 16:20 - 18:30 - 20:40
@@ -25,16 +25,16 @@ public class cartelera {
         int op = datos.nextInt();
         switch(op){
             case 1:
-                facturacion.facturacion1();
+                facturacion.facturacion1(opc);
                 break;
                 case 2:
-                    facturacion.facturacion2();
+                    facturacion.facturacion2(opc);
                 break;
                 case 3:
-                    facturacion.facturacion3();
+                    facturacion.facturacion3(opc);
                 break;
                 case 4:
-                    facturacion.facturacion4();
+                    facturacion.facturacion4(opc);
                 break;
                 default:
                     System.out.println("Opcion no valida");

@@ -15,46 +15,53 @@ public class RegistroVentas {
         String horario;
         String sala;
         int boletos;
-        List<String> snacks;
+        List<String> snacksComprados;
         double total;
 
-        public Venta(String pelicula, String horario, String sala, int boletos, List<String> snacks, double total) {
+        public Venta(String pelicula, String horario, String sala, int boletos, List<String> snacksComprados, double total) {
             this.pelicula = pelicula;
             this.horario = horario;
             this.sala = sala;
             this.boletos = boletos;
-            this.snacks = snacks;
+            this.snacksComprados = snacksComprados;
             this.total = total;
         }
 
         @Override
         public String toString() {
-            return """
-                   ------------------------------
-                   Película: %s
-                   Horario: %s
-                   Sala: %s
-                   Boletos vendidos: %d
-                   Snacks: %s
-                   Total pagado: $%.2f
-                   ------------------------------
-                   """.formatted(pelicula, horario, sala, boletos, String.join(", ", snacks), total);
+            String info = "Película: " + pelicula + "\n"
+                    + "Horario: " + horario + " | Sala: " + sala + "\n"
+                    + "Boletos: " + boletos + "\n"
+                    + "Snacks:\n";
+            if (snacksComprados.size() == 0) {
+                info += "  Ninguno\n";
+            } else {
+                for (int i = 0; i < snacksComprados.size(); i++) {
+                    info += "  " + snacksComprados.get(i) + "\n";
+                }
+            }
+            info += "Total pagado: $" + String.format("%.2f", total);
+            return info;
         }
     }
 
-    private static final List<Venta> ventas = new ArrayList<>();
+    static List<Venta> ventas = new ArrayList<>();
 
-    public static void registrarVenta(String pelicula, String horario, String sala, int boletos, List<String> snacks, double total) {
-        ventas.add(new Venta(pelicula, horario, sala, boletos, snacks, total));
+    public static void registrarVenta(String pelicula, String horario, String sala, int boletos, List<String> snacksComprados, double total) {
+        ventas.add(new Venta(pelicula, horario, sala, boletos, snacksComprados, total));
+        System.out.println("\n--- Venta registrada ---");
+        System.out.println(ventas.get(ventas.size() - 1));
+        System.out.println("------------------------\n");
     }
 
     public static void mostrarVentas() {
+        System.out.println("Resumen de Ventas:");
         if (ventas.size() == 0) {
-            System.out.println("No se han registrado ventas.");
+            System.out.println("No hay ventas registradas.");
         } else {
-            System.out.println("===== REGISTRO DE VENTAS =====");
-            for (int i = 0; i < ventas.size(); i++) {
-                System.out.println(ventas.get(i));
+            for (Venta venta : ventas) {
+                System.out.println(venta);
+                System.out.println("------------------------");
             }
         }
     }

@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package trabajobimestralpoo;
-
+import java.util.List;
 /**
  *
  * @author abrah
@@ -11,18 +11,17 @@ package trabajobimestralpoo;
 
 public class Pelicula {
     String titulo;
-    String horario;
-    String salas;
+    List<String> horarios;
+    List<String> salas;
 
-    // Constructor
-    public Pelicula(String titulo, String director, String duracion) {
+    public Pelicula(String titulo, String horario, String sala) {
         this.titulo = titulo;
-        this.horario = director;
-        this.salas = duracion;
+        this.horarios = List.of(horario.split(" - "));
+        this.salas = List.of(sala.split("\\|"));
     }
 
     @Override
     public String toString() {
-        return String.format("%s\n%s\n%s",titulo,horario,salas);
+        return titulo;
     }
 }

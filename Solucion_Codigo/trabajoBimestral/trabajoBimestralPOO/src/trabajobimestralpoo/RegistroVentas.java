@@ -49,12 +49,12 @@ public class RegistroVentas {
     }
 
     public static void mostrarVentas() {
-        if (ventas.isEmpty()) {
+        if (ventas.size() == 0) {
             System.out.println("No se han registrado ventas.");
         } else {
             System.out.println("===== REGISTRO DE VENTAS =====");
-            for (Venta v : ventas) {
-                System.out.println(v);
+            for (int i = 0; i < ventas.size(); i++) {
+                System.out.println(ventas.get(i));
             }
         }
     }

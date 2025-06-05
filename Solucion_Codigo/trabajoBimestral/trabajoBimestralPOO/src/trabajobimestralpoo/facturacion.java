@@ -1,4 +1,3 @@
-
 package trabajobimestralpoo;
 
 import java.util.Scanner;
@@ -19,7 +18,7 @@ public class facturacion {
             case 1 ->
                 procesarVenta("DESTINO FINAL: LAZOS DE SANGRE", "14:10", "03", dia);
             case 2 ->
-                System.out.println("Opción no implementada para facturación");
+                procesarVenta("DESTINO FINAL: LAZOS DE SANGRE", "16:20", "05", dia);
             case 3 ->
                 procesarVenta("DESTINO FINAL: LAZOS DE SANGRE", "18:30", "01", dia);
             case 4 ->
@@ -87,7 +86,13 @@ public class facturacion {
     }
 
     private static void procesarVenta(String pelicula, String horario, String sala, String dia) {
-        double precioBoleto = (dia.equalsIgnoreCase("martes") || dia.equalsIgnoreCase("jueves")) ? 3.75 : 7.50;
+        double precioBoleto;
+
+        if (dia.equalsIgnoreCase("martes") || dia.equalsIgnoreCase("jueves")) {
+            precioBoleto = 3.75;
+        } else {
+            precioBoleto = 7.50;
+        }
         System.out.println("Precio del boleto: $" + precioBoleto);
         System.out.println("Ingrese la cantidad de boletos a comprar");
         int boletos = facturacion.nextInt();
@@ -95,7 +100,6 @@ public class facturacion {
         double totalBoletos = boletos * precioBoleto;
         System.out.println("Usted tiene que pagar el monto de: $" + totalBoletos);
 
-      
         snacks.ResultadoSnacks resultadoSnacks = snacks.venta();
 
         double totalVenta = totalBoletos + resultadoSnacks.totalSnacks;

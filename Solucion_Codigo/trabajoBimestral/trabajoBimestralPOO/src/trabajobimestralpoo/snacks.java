@@ -28,6 +28,7 @@ public class snacks {
             switch (op) {
                 case (1) -> {
                     System.out.println("(1)DULCE  |(2)SALADO");
+                    int p = snacks.nextInt();
                     System.out.println("Cuantas palomitas desea?");
                     cant = snacks.nextInt();
                     snacks.nextLine();
@@ -65,6 +66,7 @@ public class snacks {
                          (1)Pepsi    | (2)Cocacola | (3)Sprite | (4)Fanta
                          (5)Tropical | (6)Gallito  | (7)7up    | (8)Agua
                          """);
+                    int b = snacks.nextInt();
                     System.out.println("Cuantas bebidas desea?");
                     cant = snacks.nextInt();
                     snacks.nextLine();
